@@ -1,14 +1,14 @@
 import { TabNavigator } from 'react-navigation';
 import Landing from '../views/landing/Landing';
-import Profile from '../views/profile/Profile';
+import MainStack from './MainStack';
 
 const Root = TabNavigator({
-  Landing: { screen: Landing },
-  Profile: { screen: Profile }
+    Landing: { screen: Landing },
+    Main: { screen: MainStack }
 }, {
-  navigationOptions: {
-    tabBarVisible: false
-  }
+    navigationOptions: {
+        tabBarVisible: false
+    }
 });
 
 export default Root;

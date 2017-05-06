@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
+import PropTypes from 'prop-types';
 
 class Profile extends Component {
-    static navigationOptions = {
-        title: "Profile"
-    }
-
     render () {
+        const { navigate } = this.props.navigation;
         return (
             <View>
-                <Text>Profile</Text>
+                <Text>Meeeee</Text>
+                <Button onPress={() => navigate('Groups')} title="Groups" />
+                <Button onPress={() => navigate('Rounds')} title="Rounds" />
             </View>
         );
     }
 }
+
+
+Profile.propTypes = {
+    navigation: PropTypes.object
+};
 
 export default Profile;
