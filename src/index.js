@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import Root from './navigation';
 
 export default function MyRound () {
     return (
-        <View>
-          <Text>MyRound</Text>
+        <View style={{ flex: 1 }}>
+          <Root />
         </View>
     );
 }
