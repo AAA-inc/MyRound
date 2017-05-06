@@ -3,6 +3,9 @@ import { View, Text, Button } from 'react-native';
 import PropTypes from 'prop-types';
 
 class Profile extends Component {
+    static navigationOptions = {
+      title: 'Groups'
+  };
     render () {
         const { navigate } = this.props.navigation;
         return (

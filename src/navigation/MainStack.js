@@ -7,17 +7,19 @@ import RoundStack from './RoundStack';
 
 const MainStack = TabNavigator({
     Me: {
-    	screen: StackNavigator({
-    		Profile: { screen: Profile },
-    		Groups: { screen: GroupStack },
-    		Rounds: { screen: RoundStack }
-    	})
+        screen: StackNavigator({
+            Profile: { screen: Profile },
+            Groups: { screen: GroupStack },
+            Rounds: { screen: RoundStack }
+        }, {
+            headerMode: 'screen'
+        })
     },
     Create: {
-    	screen: Create
+        screen: Create
     },
     AddMe: {
-    	screen: Add
+        screen: Add
     }
 }, {
     navigationOptions: {
