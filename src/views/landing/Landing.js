@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { View, Text, Button } from 'react-native';
+import PropTypes from 'prop-types';
 
 class Landing extends Component {
     render () {
@@ -8,7 +8,7 @@ class Landing extends Component {
         return (
             <View>
                 <Text>Landing!!!</Text>
-                <Button onPress={() => navigate('Profile')} title="Facebook" />
+                <Button onPress={() => navigate('Main')} title="Facebook" />
             </View>
         );
     }

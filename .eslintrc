@@ -100,9 +100,6 @@
         "beforeColon": false,
         "afterColon": true
     }],
-    "new-cap": [2, {
-      "newIsCap": true
-    }],
     "no-multiple-empty-lines": [2, {
       "max": 2
     }],
