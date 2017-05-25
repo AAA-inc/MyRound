@@ -1,14 +1,27 @@
-import { TabNavigator } from 'react-navigation';
-import Landing from '../views/landing/Landing';
-import MainStack from './MainStack';
+import { StackNavigator } from 'react-navigation';
+import { Authenticated } from './Authenticated';
+import { NotAuthenticated } from './NotAuthenticated';
 
-const Root = TabNavigator({
-    Landing: { screen: Landing },
-    Main: { screen: MainStack }
-}, {
-    navigationOptions: {
-        tabBarVisible: false
-    }
-});
-
-export default Root;
+export const createRootNavigator = (signedIn = false) => {
+    return StackNavigator(
+        {
+            Authenticated: {
+                screen: Authenticated,
+                navigationOptions: {
+                    gesturesEnabled: false
+                }
+            },
+            NotAuthenticated: {
+                screen: NotAuthenticated,
+                navigationOptions: {
+                    gesturesEnabled: false
+                }
+            }
+        },
+        {
+            headerMode: 'none',
+            mode: 'modal',
+            initialRouteName: signedIn ? 'Authenticated' : 'NotAuthenticated'
+        }
+    );
+};
