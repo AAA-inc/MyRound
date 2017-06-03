@@ -1,13 +1,30 @@
 import { StackNavigator } from 'react-navigation';
 import Groups from '../views/groups/Groups';
-import Success from '../views/groups/Success';
+import Create from '../views/groups/Create';
+import Join from '../views/groups/Join';
+import GroupRoundStack from './GroupRoundStack';
 
 const GroupStack = StackNavigator({
     Group: {
         screen: Groups
     },
-    Success: {
-        screen: Success
+    Create: {
+        screen: Create,
+        navigationOptions: {
+	        tabBarVisible: false
+	    }
+    },
+    GroupDetail: {
+        screen: GroupRoundStack,
+        navigationOptions: {
+	        tabBarVisible: false
+	    }
+    },
+    Join: {
+        screen: Join,
+        navigationOptions: {
+	        tabBarVisible: false
+	    }
     }
 });
 

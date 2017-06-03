@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
-class Add extends Component {
+class Join extends Component {
     render () {
         return (
             <View>
-                <Text>Add!!!</Text>
+                <Text>Join!!!</Text>
             </View>
         );
     }
 }
 
-Add.propTypes = {
+Join.propTypes = {
     navigation: PropTypes.object
 };
 
-export default Add;
+export default Join;

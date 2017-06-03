@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
-class Home extends Component {
+class OrderDetail extends Component {
+    static navigationOptions = {
+        title: 'Menu'
+    };
     render () {
         return (
             <View>
-                <Text style={{ marginTop: 50 }}>Home!!!</Text>
+                <Text>Menu</Text>
             </View>
         );
     }
 }
 
-Home.propTypes = {
+OrderDetail.propTypes = {
     navigation: PropTypes.object
 };
 
-export default Home;
+export default OrderDetail;
