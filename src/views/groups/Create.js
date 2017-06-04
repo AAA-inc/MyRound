@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
-import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import { View, TextInput } from 'react-native';
+import Button from '../../common/Button';
 
-const styles = StyleSheet.create({
+const styles = {
     input: {
         padding: 10,
         color: 'black',
-        height: 40
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#000'
+    },
+    buttonContainer: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0
+    },
+    textStyle: {
+        color: '#fff',
+        fontSize: 30,
+        alignSelf: 'center'
+    },
+    buttonStyle: {
+        backgroundColor: 'green'
     }
-});
+};
 
 class Create extends Component {
     static navigationOptions = {
@@ -17,14 +34,21 @@ class Create extends Component {
     render () {
         const { navigate } = this.props.navigation;
         return (
-            <View>
-                <Text>Create!!!</Text>
+            <View style={{ flex: 1 }}>
                 <TextInput
                     style={styles.input}
                     autoCorrect={false}
                     placeholder='Title of your group'
                 />
-                <Button onPress={() => navigate('GroupDetail')} title="Create" />
+                <View style={styles.buttonContainer}>
+                    <Button
+                        buttonStyle={styles.buttonStyle}
+                        textStyle={styles.textStyle}
+                        onPress={() => navigate('GroupDetail')}
+                    >
+                        Create
+                    </Button>
+                </View>
             </View>
         );
     }
