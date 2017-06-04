@@ -1,25 +1,24 @@
-/* eslint-disable react/display-name */
 import React from 'react';
 import { Text } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-import Home from '../views/home/Home';
-import Profile from '../views/profile/Profile';
+import ProfileStack from './ProfileStack';
+import GroupStack from './GroupStack';
 
 export const Authenticated = TabNavigator({
     Home: {
-        screen: Home,
+        screen: GroupStack,
         navigationOptions: {
             tabBarLabel: 'Home',
-            tabBarIcon: () => (
+            tabBarIcon: () => ( // eslint-disable-line
                 <Text>H</Text>
             )
         }
     },
     Profile: {
-        screen: Profile,
+        screen: ProfileStack,
         navigationOptions: {
             tabBarLabel: 'Profile',
-            tabBarIcon: () => (
+            tabBarIcon: () => ( // eslint-disable-line
                 <Text>P</Text>
             )
         }

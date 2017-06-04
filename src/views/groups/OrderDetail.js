@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
-class Add extends Component {
+class OrderDetail extends Component {
+    static navigationOptions = {
+        title: 'Menu',
+        headerLeft: null
+    };
     render () {
         return (
             <View>
-                <Text>Add!!!</Text>
+                <Text>Menu</Text>
             </View>
         );
     }
 }
 
-Add.propTypes = {
+OrderDetail.propTypes = {
     navigation: PropTypes.object
 };
 
-export default Add;
+export default OrderDetail;

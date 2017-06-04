@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, TextInput, Text } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import Button from '../../common/Button';
 
 const styles = {
@@ -36,26 +36,25 @@ const styles = {
     }
 };
 
-class Create extends Component {
+class Join extends Component {
     render () {
-        const { navigate } = this.props.navigation;
         return (
             <View style={{ flex: 1 }}>
-                <Text style={styles.text}>Start a group!</Text>
+                <Text style={styles.text}>Join a group!</Text>
                 <View style={styles.inputContainer}>
                     <TextInput
                         style={styles.input}
                         autoCorrect={false}
-                        placeholder='Title of your group'
+                        placeholder='Secret Code'
                     />
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button
                         buttonStyle={styles.buttonStyle}
                         textStyle={styles.textStyle}
-                        onPress={() => navigate('GroupDetail')}
+                        onPress={() => this.props.navigation.navigate('GroupDetail')}
                     >
-                        Create
+                        Join
                     </Button>
                 </View>
             </View>
@@ -63,8 +62,8 @@ class Create extends Component {
     }
 }
 
-Create.propTypes = {
+Join.propTypes = {
     navigation: PropTypes.object
 };
 
-export default Create;
+export default Join;
