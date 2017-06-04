@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-import Profile from '../views/profile/Profile';
+import ProfileStack from './ProfileStack';
 import GroupStack from './GroupStack';
 
 export const Authenticated = TabNavigator({
@@ -9,16 +9,16 @@ export const Authenticated = TabNavigator({
         screen: GroupStack,
         navigationOptions: {
             tabBarLabel: 'Home',
-            tabBarIcon: () => (
+            tabBarIcon: () => ( // eslint-disable-line
                 <Text>H</Text>
             )
         }
     },
     Profile: {
-        screen: Profile,
+        screen: ProfileStack,
         navigationOptions: {
             tabBarLabel: 'Profile',
-            tabBarIcon: () => (
+            tabBarIcon: () => ( // eslint-disable-line
                 <Text>P</Text>
             )
         }

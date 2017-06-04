@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 class OrderSummary extends Component {
     static navigationOptions = {
-        title: 'My Round'
+        title: 'My Round',
+        headerLeft: null
     };
     roundStartHandler () {
         console.log('roundStartHandler');
@@ -16,7 +17,7 @@ class OrderSummary extends Component {
         return (
             <View>
                 <Text>OrderSummary</Text>
-                
+
                 <Button
                   onPress={this.roundStartHandler}
                   title="Start round"
@@ -28,7 +29,7 @@ class OrderSummary extends Component {
                 <Text>Beer</Text>
                 <Text>Wine</Text>
                 <Text>Wine</Text>
-                
+
                 <Text>Anitas order is missing -> nudge her</Text>
 
                 <Button

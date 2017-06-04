@@ -6,17 +6,20 @@ import GroupRoundStack from './GroupRoundStack';
 
 const GroupStack = StackNavigator({
     Group: {
-        screen: Groups
+        screen: StackNavigator({
+            Group: { screen: Groups },
+            GroupDetail: {
+                screen: GroupRoundStack,
+                navigationOptions: {
+        	        tabBarVisible: false
+        	    }
+            }
+        })
     },
     Create: {
         screen: Create,
         navigationOptions: {
-	        tabBarVisible: false
-	    }
-    },
-    GroupDetail: {
-        screen: GroupRoundStack,
-        navigationOptions: {
+            header: null,
 	        tabBarVisible: false
 	    }
     },
@@ -26,6 +29,8 @@ const GroupStack = StackNavigator({
 	        tabBarVisible: false
 	    }
     }
+}, {
+    headerMode: 'none'
 });
 
 export default GroupStack;

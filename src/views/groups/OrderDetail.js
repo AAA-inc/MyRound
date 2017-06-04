@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 class OrderDetail extends Component {
     static navigationOptions = {
-        title: 'Menu'
+        title: 'Menu',
+        headerLeft: null
     };
     render () {
         return (

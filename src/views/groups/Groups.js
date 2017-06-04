@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import Button from '../../common/Button';
 
 const styles = {
@@ -29,7 +29,7 @@ const styles = {
 
 class Groups extends Component {
     static navigationOptions = {
-        title: 'Groups'
+        title: 'My Groups'
     }
 
     render () {

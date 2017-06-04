@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { isAuthenticated } from './views/auth/auth';
 import { createRootNavigator } from './navigation';
+console.ignoredYellowBox = ['Warning: View.propTypes'];
+// console.ignoredYellowBox = ['Warning: BackAndroid'];
 
 class MyRound extends Component {
 
